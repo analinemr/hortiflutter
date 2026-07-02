@@ -13,6 +13,7 @@ class ProductModel {
     required this.imagem,
   });
 
+  //Mapeamento de todos os atributos 
   factory ProductModel.fromJson(Map json){
     return ProductModel(
     id: json["id"],
