@@ -1,13 +1,15 @@
 class UserModel {
-  String login;
-  String senha;
-  String nome; 
-  String cpf;
-  String email;
-  String dataNascimento;
-  String ?foto;
+  final int? id;
+  final String login;
+  final String senha;
+  final String nome; 
+  final String cpf;
+  final String email;
+  final String dataNascimento;
+  final String ?foto;
 
   UserModel({
+    required this.id,    
     required this.login, //this. para encapsular a informação e utilizar posteriormente
     required this.senha,
     required this.nome,
@@ -33,6 +35,7 @@ Map<String, dynamic> toJson(){
 //Recebe dados da API
 factory UserModel.fromJson(Map<String, dynamic> json){
   return UserModel(
+    id:json["id"],
     login: json["login"], 
     senha: json["senha"], 
     nome: json["nome"], 
