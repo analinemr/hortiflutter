@@ -25,10 +25,7 @@ class UserService {
     final response = await http.post(
       Uri.parse("$baseUrl/login"),
       headers: {"Content-Type": "application/json"},
-      body: jsonEncode({
-        "login": login,
-        "senha": senha,
-      }),
+      body: jsonEncode({"login": login, "senha": senha}),
     );
 
     if (response.statusCode == 200) {

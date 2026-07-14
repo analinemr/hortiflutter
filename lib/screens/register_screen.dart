@@ -1,4 +1,4 @@
-import '../service/user_service.dart';
+import '../services/user_service.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
@@ -76,6 +76,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       }
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -145,9 +146,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
- 
   // CAMPOS PERSONALIZADOS
-
 
   Widget campoPadrao(
     TextEditingController controller,
