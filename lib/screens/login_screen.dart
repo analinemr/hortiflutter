@@ -13,7 +13,6 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final loginController = TextEditingController();
   final senhaController = TextEditingController();
-  
 
   bool loading = false;
 
@@ -31,7 +30,9 @@ class _LoginScreenState extends State<LoginScreen> {
       if (!mounted) return;
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => HomeScreen(nome: user.nome, userId: user.id!)),
+        MaterialPageRoute(
+          builder: (_) => HomeScreen(userId: user.id!, nome: user.nome),
+        ),
       );
     } else {
       ScaffoldMessenger.of(
